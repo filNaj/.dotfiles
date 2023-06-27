@@ -1,0 +1,19 @@
+[user]
+	name = Filip
+	email = filipnajjar@yahoo.com
+	signingKey = ""
+[credential]
+	helper = cache
+[core]
+	editor = nvim
+	autocrlf = input
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
+[init]
+	defaultBranch = main
+[alias]
+	a = !git add -A && git commit -m

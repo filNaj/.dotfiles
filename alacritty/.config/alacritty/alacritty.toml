@@ -1,0 +1,35 @@
+live_config_reload = true
+
+[colors.primary]
+background = "#010C19"
+
+[cursor.style]
+shape = "Beam"
+
+[font.bold]
+family = "JetBrainsMonoNerdFontPropo"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMonoNerdFontPropo"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMonoNerdFontPropo"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMonoNerdFontPropo"
+style = "Regular"
+
+[window]
+decorations = "none"
+opacity = 1
+
+[window.dimensions]
+columns = 104
+lines = 30
+
+[window.padding]
+x = 10
+y = 5

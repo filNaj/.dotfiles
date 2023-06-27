@@ -1,0 +1,67 @@
+live_config_reload: true
+
+window:
+  decorations: none
+  opacity: 1
+  dimensions:
+    columns: 104
+    lines: 30
+  padding:
+    x: 10
+    y: 0
+#  dynamic_padding: false
+    
+    
+cursor:
+  style:
+    shape: Beam
+
+font:
+  normal:
+    # family: "Source Code Pro for Powerline"
+    # family: "JetBrainsMonoNerdFontPropo"
+    #MesloLGS NF
+    family: "JetBrainsMonoNerdFontPropo"
+    style: Regular
+  bold:
+    family: "JetBrainsMonoNerdFontPropo"
+    style: Bold
+  italic:
+    family: "JetBrainsMonoNerdFontPropo"
+    style: Italic
+  bold_italic:
+    family: "JetBrainsMonoNerdFontPropo"
+    style: Bold Italic
+    
+colors:
+    primary:
+      #whitish
+      # background: '#ffffff' #darkplus colorscheme
+
+      #Blue mac os style
+      # background: '#010C19'
+
+      #grey 
+      # background: '#302f2f' #light
+      # background: '#292828' #medium
+      # background: '#232222' #dark
+      # background: '#1e1e1e' #darkplus colorscheme
+
+      #black with blur 10
+      # background: '#201f1f'
+      # background: '#161616'
+
+      #TOKYO NIGHT 
+      # background: '#191a25' #night
+      # background: '#e2e2e8' #day
+      # background: '#252538' #light
+      # background: '#26273f' #moon & storm
+
+
+      #green with blur: 5 
+      # background: '#001b22'
+      # background: '#001014' #darker shade of green
+       # background: '#052020' #try this too
+       # background: '#031C1E' #with opacity 1
+
+
