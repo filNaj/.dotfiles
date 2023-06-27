@@ -18,3 +18,5 @@
 [alias]
 	a = !git add -A && git commit -m
 	cg = config --global
+[pull]
+	ff = only
