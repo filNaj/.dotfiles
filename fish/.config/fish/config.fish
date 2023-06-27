@@ -1,9 +1,10 @@
+#run fihs_config to open the config browser 
 
 alias lg="ls | grep"
 alias vi="nvim"
 alias o="open ."
 alias e="exit"
-alias ls="ls -1"
+alias l="ls -1"
 
 #Folders
 alias coding="cd ~/Personal\ Work/Coding/"
