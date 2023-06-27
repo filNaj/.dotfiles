@@ -17,3 +17,4 @@
 	defaultBranch = main
 [alias]
 	a = !git add -A && git commit -m
+	cg = config --global
