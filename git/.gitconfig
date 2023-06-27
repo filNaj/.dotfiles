@@ -3,7 +3,7 @@
 	email = filipnajjar@yahoo.com
 	signingKey = ""
 [credential]
-	helper = cache
+	helper = store
 [core]
 	editor = nvim
 	autocrlf = input
