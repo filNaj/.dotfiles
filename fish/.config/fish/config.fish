@@ -21,6 +21,9 @@ alias fishrc="nvim ~/.config/fish/config.fish"
 alias alacrc="nvim ~/.config/alacritty/alacritty.toml"
 alias vimrc="cd ~/.config/nvim/lua/user"
 alias tmuxrc="nvim ~/.tmux.conf"
+alias gitrc="nvim ~/.config/fish/git_aliases.fish"
+alias tiderc="nvim ~/.config/fish/tide_config.fish"
+
 
 #Tmux
 function ide

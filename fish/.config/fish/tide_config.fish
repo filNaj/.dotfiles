@@ -1,7 +1,8 @@
 #Mac OS blue set up
 #git
 set -g tide_git_icon ''
-set -g tide_git_bg_color_unstable green
+# set -g tide_git_bg_color_unstable red
+set -g tide_git_bg_color '#48ffcb'
 #os
 set -g tide_os_bg_color "#15FC99"
 set -g tide_os_color black

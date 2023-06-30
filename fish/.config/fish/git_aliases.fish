@@ -2,6 +2,7 @@
 alias g="git"
 alias ga="git add"
 alias gc="git commit -m"
+alias gac="git commit -am"
 alias gs="git status"
 alias gss="git status -s"
 alias gd="git diff"
