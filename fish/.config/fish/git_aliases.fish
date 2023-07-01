@@ -8,6 +8,7 @@ alias gss="git status -s"
 alias gd="git diff"
 alias gl="git log --oneline --decorate --graph"
 alias gm="git merge"
+alias gp="git push"
 
 #Branch Aliases:
 alias gb="git branch"
