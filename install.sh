@@ -9,6 +9,7 @@ sudo apt install stow
 sudo apt install tmux
 sudo apt install git
 sudo apt install tree
+sudo snap install diff-so-fancy
 
 #Fisher - Package manager for fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
