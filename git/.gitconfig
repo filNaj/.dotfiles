@@ -18,5 +18,7 @@
 [alias]
 	a = !git add -A && git commit -m
 	cg = config --global
+  st = stash
+  s = switch -
 [pull]
 	ff = only

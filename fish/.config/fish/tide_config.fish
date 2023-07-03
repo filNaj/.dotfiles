@@ -21,7 +21,9 @@ set -g tide_time_color "#15FC99"
 # set -g tide_time_color "#0E3357"
 
 
-#Tide default config files are in ~/.config/fish/functions/tide/configure/configs 
-#Link to tide config github page: https://github.com/IlanCosman/tide/wiki/Configuration
+#Tide default config files are in 
+#~/.config/fish/functions/tide/configure/configs 
+#Link to tide config github page: 
+#https://github.com/IlanCosman/tide/wiki/Configuration
 
 
