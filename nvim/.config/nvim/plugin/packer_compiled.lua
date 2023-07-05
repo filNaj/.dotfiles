@@ -169,6 +169,14 @@ _G.packer_plugins = {
     path = "/home/filip/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["noice.nvim"] = {
+    config = { "\27LJ\2\nÙ\2\0\0\a\0\19\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0005\3\v\0005\4\6\0005\5\3\0005\6\4\0=\6\5\5=\5\a\0044\5\0\0=\5\b\0045\5\t\0=\5\n\4=\4\f\3=\3\14\0024\3\3\0005\4\16\0005\5\15\0=\5\17\4>\4\1\3=\3\18\2B\0\2\1K\0\1\0\vroutes\vfilter\1\0\1\tview\fcmdline\1\0\2\tfind\r^%s*[/?]\nevent\fcmdline\nviews\1\0\0\18cmdline_popup\1\0\0\16win_options\1\0\1\17winhighlight4NormalFloat:NormalFloat,FloatBorder:FloatBorder\19filter_options\vborder\1\0\0\fpadding\1\3\0\0\3\2\3\3\1\0\1\nstyle\tnone\nsetup\nnoice\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/filip/.local/share/nvim/site/pack/packer/opt/noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/home/filip/.local/share/nvim/site/pack/packer/start/nui.nvim",
@@ -312,6 +320,10 @@ vim.cmd [[au FileType vue ++once lua require("packer.load")({'vim-prettier'}, { 
 vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-prettier'}, { ft = "html" }, _G.packer_plugins)]]
 vim.cmd [[au FileType python ++once lua require("packer.load")({'nvim-dap-python'}, { ft = "python" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'noice.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
 time([[Sourcing ftdetect script at: /home/filip/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]], true)
