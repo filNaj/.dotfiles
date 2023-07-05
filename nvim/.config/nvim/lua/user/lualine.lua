@@ -99,10 +99,15 @@ require('lualine').setup {
   winbar = {},
   inactive_winbar = {},
   extensions = {}
-  
-  
-  
 }
+
+
+-- SLANTED GAPS STYLE
+-- copy paste the config from this link
+-- https://github.com/nvim-lualine/lualine.nvim/blob/master/examples/slanted-gaps.lua
+  
+  
+  
 
 
 
