@@ -89,6 +89,14 @@ keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
+
+keymap("n", "<leader>dm", "<cmd>lua require('neotest').run.run()<cr>", opts)
+keymap("n", "<leader>dM", "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", opts)
+keymap("n", "<leader>df", "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>", opts)
+keymap("n", "<leader>dF", "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>", opts)
+keymap("n", "<leader>dS", "<cmd>lua require('neotest').summary.toggle()<cr>", opts)
+
+
 -- Prettier
 keymap("n", "<leader>fo", ":Prettier<cr>", opts)
 

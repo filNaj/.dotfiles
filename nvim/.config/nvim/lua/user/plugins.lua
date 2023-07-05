@@ -68,15 +68,15 @@ return packer.startup(function(use)
   -- use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
   
   -- Autosave
-use({
-	"Pocco81/auto-save.nvim",
-	config = function()
-		 require("auto-save").setup {
-			-- your config goes here
-			-- or just leave it empty :)
-		 }
-	end,
-})
+  -- use({
+  -- 	"Pocco81/auto-save.nvim",
+  -- 	config = function()
+  -- 		 require("auto-save").setup {
+  -- 			-- your config goes here
+  -- 			-- or just leave it empty :)
+  -- 		 }
+  -- 	end,
+  -- })
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -109,13 +109,24 @@ use({
   }
     
   -- Git
-  use { "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" }
+  use "lewis6991/gitsigns.nvim"
 
   -- DAP
-  use { "mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d" }
-  use { "rcarriga/nvim-dap-ui", commit = "d76d6594374fb54abf2d94d6a320f3fd6e9bb2f7" }
-  use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
-
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use {
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    config = function(_, opts)
+      local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+      require("dap-python").setup(path)
+    end,
+  }
+  use "theHamsta/nvim-dap-virtual-text"
+  use "ravenxrz/DAPInstall.nvim"
 
   --NeoSolarized colorscheme
   use ("Tsuzat/NeoSolarized.nvim")
