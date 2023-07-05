@@ -64,6 +64,7 @@ return packer.startup(function(use)
   use { "lewis6991/gitsigns.nvim" }
   use { "nvim-telescope/telescope.nvim", tag = '0.1.2' }
   use {'neoclide/coc.nvim', branch = 'release'} --React autocompletion
+  use { 'rcarriga/nvim-notify' }
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -98,6 +99,13 @@ return packer.startup(function(use)
     ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
   }
 
+  -- Noice
+  use {
+    'folke/noice.nvim',
+    event = "VimEnter",
+    requires = { "MunifTanjim/nui.nvim", "hrsh7th/nvim-cmp", }
+  }
+
   -- Colorschemes
   use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" }
   use { "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" }
@@ -119,6 +127,8 @@ return packer.startup(function(use)
 
   -- DAP
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use "theHamsta/nvim-dap-virtual-text"
+  use "ravenxrz/DAPInstall.nvim"
   use {
     "mfussenegger/nvim-dap-python",
     ft = "python",
@@ -130,25 +140,6 @@ return packer.startup(function(use)
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
       require("dap-python").setup(path)
     end,
-  }
-  use "theHamsta/nvim-dap-virtual-text"
-  use "ravenxrz/DAPInstall.nvim"
-
-
-  -- Notify 
-  use {
-    'rcarriga/nvim-notify',
-  }
-
-  -- Noice
-  use {
-    'folke/noice.nvim',
-    event = "VimEnter",
-    requires = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      "hrsh7th/nvim-cmp",
-    }
   }
 
 
