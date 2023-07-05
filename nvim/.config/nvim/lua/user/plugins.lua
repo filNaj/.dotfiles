@@ -40,9 +40,8 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
+
   use { "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" } -- Have packer manage itself
-  use { "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" } -- Useful lua functions used by lots of plugins
   use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" } -- Autopairs, integrates with both cmp and treesitter
   use { "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" }
   use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" }
@@ -56,27 +55,11 @@ return packer.startup(function(use)
   use { "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" }
   use { "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" }
-  use { "nvim-lua/popup.nvim"} 
-  -- use { "nvim-lua/plenary.nvim"}
-  use { "nvim-telescope/telescope.nvim"}
-
-  -- Colorschemes
-  use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" }
-  use { "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" }
-  --newer commit 
-  -- use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
-  -- use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
-  
-  -- Autosave
-  -- use({
-  -- 	"Pocco81/auto-save.nvim",
-  -- 	config = function()
-  -- 		 require("auto-save").setup {
-  -- 			-- your config goes here
-  -- 			-- or just leave it empty :)
-  -- 		 }
-  -- 	end,
-  -- })
+  use { "nvim-lua/plenary.nvim" }
+  use { "nvim-lua/popup.nvim" }
+  use { "lewis6991/gitsigns.nvim" }
+  use { "nvim-telescope/telescope.nvim", tag = '0.1.2' }
+  use {'neoclide/coc.nvim', branch = 'release'} --React autocompletion
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -98,18 +81,37 @@ return packer.startup(function(use)
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
   --use { "github/copilot.vim" }
 
-  -- Telescope
-  -- use { "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" }
-  use { "nvim-telescope/telescope-media-files.nvim" }
-  
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-    
-  -- Git
-  use "lewis6991/gitsigns.nvim"
+
+  --Prettier
+  use {
+    'prettier/vim-prettier',
+    run = 'yarn install',
+    ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
+  }
+
+  -- Colorschemes
+  use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" }
+  use { "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" }
+  --newer commit 
+  -- use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
+  -- use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
+  use "Tsuzat/NeoSolarized.nvim" --NeoSolarized colorscheme
+
+  -- Autosave
+  -- use({
+  -- 	"Pocco81/auto-save.nvim",
+  -- 	config = function()
+  -- 		 require("auto-save").setup {
+  -- 			-- your config goes here
+  -- 			-- or just leave it empty :)
+  -- 		 }
+  -- 	end,
+  -- })
 
   -- DAP
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
@@ -127,19 +129,6 @@ return packer.startup(function(use)
   }
   use "theHamsta/nvim-dap-virtual-text"
   use "ravenxrz/DAPInstall.nvim"
-
-  --NeoSolarized colorscheme
-  use ("Tsuzat/NeoSolarized.nvim")
-
-  --Prettier
-      use {
-        'prettier/vim-prettier',
-        run = 'yarn install',
-        ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
-    }
-
-  --coc.nvim for react autocompletion
-  use {'neoclide/coc.nvim', branch = 'release'}
 
 
   -- Automatically set up your configuration after cloning packer.nvim
