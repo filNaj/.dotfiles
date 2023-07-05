@@ -22,4 +22,6 @@ require "user.lsp"
 require "user.dap"
 require "user.gitsigns"
 require "user.treesitter"
+require "user.nui"
+vim.notify = require("notify")
 -- require "user.copilot"
