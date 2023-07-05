@@ -20,7 +20,7 @@ require "user.indentline"
 require "user.alpha"
 require "user.lsp"
 require "user.dap"
---require "user.gitsigns"
+require "user.gitsigns"
 -- require "user.treesitter"
 -- require "user.copilot"
 
