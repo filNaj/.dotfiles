@@ -142,6 +142,10 @@ return packer.startup(function(use)
     end,
   }
 
+  -- Neotest
+  use { "nvim-neotest/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } }
+  use { "nvim-neotest/neotest-python" }
+
 
 
 
