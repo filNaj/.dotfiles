@@ -66,7 +66,7 @@ return packer.startup(function(use)
   use { 'rcarriga/nvim-notify' }
   use { "nvim-neotest/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } }
   use { "nvim-neotest/neotest-python" }
-  use { "mg979/vim-visual-multi", branch = 'master'}
+  use { "mg979/vim-visual-multi", branch = 'master'} -- https://github.com/mg979/vim-visual-multi
 
 
   -- cmp plugins
