@@ -41,7 +41,7 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-
+  --use { "github/copilot.vim" }
   use { "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" } -- Have packer manage itself
   use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" } -- Autopairs, integrates with both cmp and treesitter
   use { "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" }
@@ -66,7 +66,6 @@ return packer.startup(function(use)
   use { "nvim-neotest/neotest-python" }
   use { "mg979/vim-visual-multi", branch = 'master'} -- https://github.com/mg979/vim-visual-multi
 
-
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
@@ -85,7 +84,13 @@ return packer.startup(function(use)
 	use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
 	use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
-  --use { "github/copilot.vim" }
+
+  -- Colorschemes
+  use { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}, }
+  use { "bluz71/vim-moonfly-colors", as = "moonfly" }
+  use "lunarvim/darkplus.nvim"
+  use "Tsuzat/NeoSolarized.nvim"
+  -- Explore more at https://github.com/rockerBOO/awesome-neovim#tree-sitter-supported-colorscheme
 
   -- Treesitter
   use {
@@ -106,20 +111,6 @@ return packer.startup(function(use)
     event = "VimEnter",
     requires = { "MunifTanjim/nui.nvim", "hrsh7th/nvim-cmp", }
   }
-
-  -- Colorschemes
-  -- use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" }
-  use {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  }
-  use { "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" }
-  use "Tsuzat/NeoSolarized.nvim"
-  --newer commit 
-  -- use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
-  -- use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
 
   -- Autosave
   -- use({
