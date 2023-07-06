@@ -113,15 +113,15 @@ return packer.startup(function(use)
   }
 
   -- Autosave
-  -- use({
-  -- 	"Pocco81/auto-save.nvim",
-  -- 	config = function()
-  -- 		 require("auto-save").setup {
-  -- 			-- your config goes here
-  -- 			-- or just leave it empty :)
-  -- 		 }
-  -- 	end,
-  -- })
+  use({
+  	"Pocco81/auto-save.nvim",
+  	config = function()
+  		 require("auto-save").setup {
+  			-- your config goes here
+  			-- or just leave it empty :)
+  		 }
+  	end,
+  })
 
   -- DAP
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
