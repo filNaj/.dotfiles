@@ -24,6 +24,10 @@ alias tmuxrc="nvim ~/.tmux.conf"
 alias gitrc="nvim ~/.config/fish/git_aliases.fish"
 alias tiderc="nvim ~/.config/fish/tide_config.fish"
 
+#Notes
+alias vc="nvim ~/Personal\ Work/Coding/Command\ Line/vim_commands"
+alias lc="nvim ~/Personal\ Work/Coding/Command\ Line/Linux\ Commands\ &\ Terminal.md"
+alias tmc="nvim ~/Personal\ Work/Coding/Command\ Line/tmux_commands.txt"
 
 #Tmux
 function ide
