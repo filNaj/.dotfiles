@@ -45,7 +45,10 @@ function todos
 end
 
 
-####################################
+
+
+
+
 set fish_greeting
 
 #TIDE configurations
@@ -54,12 +57,12 @@ source ~/.config/fish/tide_config.fish
 #GIT configurations
 source ~/.config/fish/git_aliases.fish
 
-
 set -x ANDROID_HOME $HOME/Library/Android/Sdk
 fish_add_path  $ANDROID_HOME/emulator  $ANDROID_HOME/platform-tools
 #Android Sutudio / React Native configurations
 # set -x ANDROID_SDK_ROOT $HOME/Library/Android/Sdk
 # fish_add_path  $ANDROID_SDK_ROOT/emulator  $ANDROID_SDK_ROOT/platform-tools
+
 
 #Powerline
 # set fish_function_path $fish_function_path "/usr/share/powerline/bindings/fish"
@@ -68,5 +71,3 @@ fish_add_path  $ANDROID_HOME/emulator  $ANDROID_HOME/platform-tools
 
 #Starship
 # starship init fish | source
-
-
