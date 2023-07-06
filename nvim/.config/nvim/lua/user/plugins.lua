@@ -38,8 +38,6 @@ packer.init {
   },
 }
 
-vim.opt.termguicolors = true
-
 
 -- Install your plugins here
 return packer.startup(function(use)
@@ -110,12 +108,18 @@ return packer.startup(function(use)
   }
 
   -- Colorschemes
-  use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" }
+  -- use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" }
+  use {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  }
   use { "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" }
+  use "Tsuzat/NeoSolarized.nvim"
   --newer commit 
   -- use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   -- use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
-  use "Tsuzat/NeoSolarized.nvim" --NeoSolarized colorscheme
 
   -- Autosave
   -- use({
