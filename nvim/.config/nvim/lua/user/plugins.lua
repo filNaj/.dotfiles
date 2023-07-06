@@ -41,7 +41,6 @@ packer.init {
 vim.opt.termguicolors = true
 
 
-
 -- Install your plugins here
 return packer.startup(function(use)
 
@@ -65,6 +64,10 @@ return packer.startup(function(use)
   use { "nvim-telescope/telescope.nvim", tag = '0.1.2' }
   use {'neoclide/coc.nvim', branch = 'release'} --React autocompletion
   use { 'rcarriga/nvim-notify' }
+  use { "nvim-neotest/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } }
+  use { "nvim-neotest/neotest-python" }
+  use { "mg979/vim-visual-multi", branch = 'master'}
+
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -141,12 +144,6 @@ return packer.startup(function(use)
       require("dap-python").setup(path)
     end,
   }
-
-  -- Neotest
-  use { "nvim-neotest/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } }
-  use { "nvim-neotest/neotest-python" }
-
-
 
 
   -- Automatically set up your configuration after cloning packer.nvim

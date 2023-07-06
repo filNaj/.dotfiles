@@ -27,8 +27,10 @@ decorations = "none"
 opacity = 1
 
 [window.dimensions]
-columns = 104
-lines = 30
+# columns = 104
+# lines = 30
+columns = 150
+lines = 35
 
 [window.padding]
 x = 10
