@@ -90,7 +90,6 @@ return packer.startup(function(use)
   use { "bluz71/vim-moonfly-colors", as = "moonfly" }
   use "lunarvim/darkplus.nvim"
   use "Tsuzat/NeoSolarized.nvim"
-  -- vim.cmd[[colorscheme tokyonight]]
   -- Explore more at https://github.com/rockerBOO/awesome-neovim#tree-sitter-supported-colorscheme
 
   -- Treesitter
@@ -114,15 +113,15 @@ return packer.startup(function(use)
   }
 
   -- Autosave
-  use({
-  	"Pocco81/auto-save.nvim",
-  	config = function()
-  		 require("auto-save").setup {
-  			-- your config goes here
-  			-- or just leave it empty :)
-  		 }
-  	end,
-  })
+  -- use({
+  -- 	"Pocco81/auto-save.nvim",
+  -- 	config = function()
+  -- 		 require("auto-save").setup {
+  -- 			-- your config goes here
+  -- 			-- or just leave it empty :)
+  -- 		 }
+  -- 	end,
+  -- })
 
   -- DAP
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
