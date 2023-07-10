@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use { "bluz71/vim-moonfly-colors", as = "moonfly" }
   use "lunarvim/darkplus.nvim"
   use "Tsuzat/NeoSolarized.nvim"
+  use { 'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' } }
   -- Explore more at https://github.com/rockerBOO/awesome-neovim#tree-sitter-supported-colorscheme
 
   -- Treesitter
