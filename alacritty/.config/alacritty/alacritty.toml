@@ -30,8 +30,10 @@ opacity = 1
 [window.dimensions]
 # columns = 104
 # lines = 30
-columns = 150
-lines = 35
+# columns = 150
+# lines = 35
+columns = 190
+lines = 45
 
 [window.padding]
 x = 10
