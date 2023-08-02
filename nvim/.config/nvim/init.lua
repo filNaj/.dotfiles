@@ -1,3 +1,4 @@
+-- require "user.copilot"
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -25,5 +26,7 @@ require "user.treesitter"
 require "user.notify"
 require "user.noice"
 require "user.neotest"
-vim.cmd[[colorscheme neosolarized]]
--- require "user.copilot"
+-- vim.cmd[[colorscheme neosolarized]]
+vim.cmd[[colorscheme tokyonight]]
+
+

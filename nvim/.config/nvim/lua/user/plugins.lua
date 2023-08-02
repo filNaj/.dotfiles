@@ -99,6 +99,9 @@ return packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
+  -- Treesitter/playground
+  use 'nvim-treesitter/playground'
+
   --Prettier
   use {
     'prettier/vim-prettier',
@@ -140,7 +143,6 @@ return packer.startup(function(use)
       require("dap-python").setup(path)
     end,
   }
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
