@@ -37,15 +37,19 @@ function ide
 end
 
 function todos
-    tmux split-window -h -p 66 
-    tmux split-window -h -p 50 
-    tmux send-keys -t 0 "nvim Time\ management\ \&\ Books/Todos_List.txt" Enter
-    tmux send-keys -t 1 "nvim Time\ management\ \&\ Books/Weekly_Schedule.txt" Enter
-    tmux send-keys -t 2 "nvim Time\ management\ \&\ Books/Goals\ \&\ Plan.txt Time\ management\ \&\ Books/Daily_Routine.txt" Enter
+  tmux new-session -d -s TODOS
+  tmux split-window -h -p 50 -t TODOS
+  tmux send-keys -t 0 "nvim Time\ management\ \&\ Books/Todos_List.txt" Enter
+  tmux send-keys -t 1 "nvim Time\ management\ \&\ Books/Weekly_Schedule.txt" Enter
+  tmux select-layout -t TODOS even-horizontal
+  tmux rename-window -t TODOS:0 "fish"
+  tmux attach-session -t TODOS
 end
 
-
-
+function t
+  tmux 
+  tmux rename-window -t "fish"
+end
 
 
 

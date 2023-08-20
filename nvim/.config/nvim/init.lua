@@ -28,8 +28,3 @@ require "user.noice"
 require "user.neotest"
 -- vim.cmd[[colorscheme neosolarized]]
 vim.cmd[[colorscheme tokyonight]]
-
-require("tree-setter.init")
-require("tree-setter.logger")
-require("tree-setter.main")
-require("tree-setter.setter")

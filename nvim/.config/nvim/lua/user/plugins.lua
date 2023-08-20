@@ -95,8 +95,11 @@ return packer.startup(function(use)
 
   -- Treesitter
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
   }
 
   -- Treesitter/playground
@@ -144,7 +147,10 @@ return packer.startup(function(use)
     end,
   }
 
-  use {"/home/filip/tree-setter/"}
+ use {"/home/filip/tree-setter/"}
+--  use "filNaj/tree-setter"
+
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
