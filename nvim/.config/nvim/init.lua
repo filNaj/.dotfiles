@@ -26,5 +26,6 @@ require "user.treesitter"
 require "user.notify"
 require "user.noice"
 require "user.neotest"
--- vim.cmd[[colorscheme neosolarized]]
-vim.cmd[[colorscheme tokyonight]]
+require "user.onedark"
+vim.cmd[[colorscheme onedark]]
+-- vim.cmd[[colorscheme tokyonight]]

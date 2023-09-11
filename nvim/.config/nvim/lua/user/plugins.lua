@@ -86,6 +86,7 @@ return packer.startup(function(use)
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
 
   -- Colorschemes
+  use 'navarasu/onedark.nvim'
   use { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}, }
   use { "bluz71/vim-moonfly-colors", as = "moonfly" }
   use "lunarvim/darkplus.nvim"
@@ -101,9 +102,6 @@ return packer.startup(function(use)
           ts_update()
       end,
   }
-
-  -- Treesitter/playground
-  use 'nvim-treesitter/playground'
 
   --Prettier
   use {
@@ -147,9 +145,11 @@ return packer.startup(function(use)
     end,
   }
 
- use {"/home/filip/tree-setter/"}
---  use "filNaj/tree-setter"
-
+  
+  --  use "filNaj/tree-setter"
+  use {"/home/filip/tree-setter/"}
+  use 'tpope/vim-surround'
+  use 'nvim-treesitter/playground'
 
 
   -- Automatically set up your configuration after cloning packer.nvim
