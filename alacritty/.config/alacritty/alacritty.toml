@@ -21,7 +21,7 @@ style = "Regular"
 
 [window]
 decorations = "none"
-opacity = 1
+opacity = 1 
 
 [window.dimensions]
 # columns = 104
