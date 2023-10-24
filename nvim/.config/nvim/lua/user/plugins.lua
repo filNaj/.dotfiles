@@ -54,7 +54,7 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" }
   use { "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" }
   use { "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" }
-  use { "lukas-reineke/indent-blankline.nvim" }
+  use { "lukas-reineke/indent-blankline.nvim", require("ibl").setup() }
   use { "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" }
   use { "nvim-lua/plenary.nvim" }
   use { "nvim-lua/popup.nvim" }
@@ -65,6 +65,10 @@ return packer.startup(function(use)
   use { "nvim-neotest/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } }
   use { "nvim-neotest/neotest-python" }
   use { "mg979/vim-visual-multi", branch = 'master'} -- https://github.com/mg979/vim-visual-multi
+  use {"/home/filip/tree-setter/"}
+  use 'tpope/vim-surround'
+  use {'nvim-treesitter/playground'}
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -144,12 +148,6 @@ return packer.startup(function(use)
       require("dap-python").setup(path)
     end,
   }
-
-  
-  --  use "filNaj/tree-setter"
-  use {"/home/filip/tree-setter/"}
-  use 'tpope/vim-surround'
-  use 'nvim-treesitter/playground'
 
 
   -- Automatically set up your configuration after cloning packer.nvim
