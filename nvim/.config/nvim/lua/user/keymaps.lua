@@ -55,6 +55,9 @@ keymap("v", "p", '"_dP', opts)
 -- Press jk fast to enter
 keymap("i", ",m", "<ESC>", opts)
 
+-- Define an abbreviation for console.log()
+vim.api.nvim_set_keymap("i", "clg", "console.log()<Esc><S-f>(a", { noremap = true })
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
