@@ -65,10 +65,12 @@ return packer.startup(function(use)
   use { "nvim-neotest/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } }
   use { "nvim-neotest/neotest-python" }
   use { "mg979/vim-visual-multi", branch = 'master'} -- https://github.com/mg979/vim-visual-multi
-  use {"/home/filip/tree-setter/"}
-  use 'tpope/vim-surround'
+  use { "/home/filip/tree-setter/" }
+  use {'tpope/vim-surround'}
   use {'nvim-treesitter/playground'}
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use {'SirVer/ultisnips'}
+  use {'AndrewRadev/tagalong.vim'}
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin

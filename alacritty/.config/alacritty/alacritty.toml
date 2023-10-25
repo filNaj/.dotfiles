@@ -120,7 +120,8 @@ y = 5
 # Colors (Solarized Dark)
 [colors.primary]
 background = '0x001217'
-foreground = '0x708183'
+# foreground = '0x708183'
+foreground = '0xc8d3f5'
 
 [colors.normal]
 black   = '0x002b36'
