@@ -71,6 +71,7 @@ return packer.startup(function(use)
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use {'SirVer/ultisnips'}
   use {'AndrewRadev/tagalong.vim'}
+  use {'mattn/emmet-vim'}
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
