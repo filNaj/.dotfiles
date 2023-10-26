@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use { "nvim-neotest/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } }
   use { "nvim-neotest/neotest-python" }
   use { "mg979/vim-visual-multi", branch = 'master'} -- https://github.com/mg979/vim-visual-multi
-  -- use { "/home/filip/tree-setter/" }
+  use { "/home/filip/tree-setter/" }
   use {'tpope/vim-surround'}
   use {'nvim-treesitter/playground'}
   use {'SirVer/ultisnips'}
