@@ -5,6 +5,8 @@ alias vi="nvim"
 alias o="open ."
 alias e="exit"
 alias l="ls -1"
+alias lf="l -d */"
+alias lsf="ls -d */"
 
 #Folders
 alias coding="cd ~/Personal\ Work/Coding/"
