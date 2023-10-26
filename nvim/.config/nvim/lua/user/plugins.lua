@@ -65,10 +65,9 @@ return packer.startup(function(use)
   use { "nvim-neotest/neotest", requires = { "antoinemadec/FixCursorHold.nvim" } }
   use { "nvim-neotest/neotest-python" }
   use { "mg979/vim-visual-multi", branch = 'master'} -- https://github.com/mg979/vim-visual-multi
-  use { "/home/filip/tree-setter/" }
+  -- use { "/home/filip/tree-setter/" }
   use {'tpope/vim-surround'}
   use {'nvim-treesitter/playground'}
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use {'SirVer/ultisnips'}
   use {'AndrewRadev/tagalong.vim'}
   use {'mattn/emmet-vim'}
@@ -93,9 +92,9 @@ return packer.startup(function(use)
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
 
   -- Colorschemes
+  use "olimorris/onedarkpro.nvim"
   use 'navarasu/onedark.nvim'
   use { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}, }
-  use { "bluz71/vim-moonfly-colors", as = "moonfly" }
   use "lunarvim/darkplus.nvim"
   use "Tsuzat/NeoSolarized.nvim"
   use { 'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' } }
