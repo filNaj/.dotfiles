@@ -1,5 +1,6 @@
 #Basic Aliases:
 alias g="git"
+alias glc="git clone"
 alias ga="git add"
 alias gc="git commit -m"
 alias gac="git commit -am"

@@ -96,7 +96,7 @@ return packer.startup(function(use)
   use 'navarasu/onedark.nvim'
   use { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}, }
   use "lunarvim/darkplus.nvim"
-  use "Tsuzat/NeoSolarized.nvim"
+  -- use "Tsuzat/NeoSolarized.nvim"
   use { 'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' } }
   -- Explore more at https://github.com/rockerBOO/awesome-neovim#tree-sitter-supported-colorscheme
 
