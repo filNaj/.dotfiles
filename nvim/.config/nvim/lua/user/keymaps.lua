@@ -53,7 +53,7 @@ keymap("v", "p", '"_dP', opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", ",m", "<ESC>", opts)
+-- keymap("i", ",m", "<ESC>", opts)
 
 -- Define an abbreviation for console.log()
 vim.api.nvim_set_keymap("i", "clg", "console.log()<Esc><S-f>(a", { noremap = true })
@@ -142,4 +142,5 @@ keymap("n", "<leader>re",":edit!<cr>", opts)
 --key binding for lua vim.lsp.buf.formatting_sync()
 keymap("n", "<leader>f", ":lua vim.lsp.buf.format()<cr>", opts)
 
-
+-- delete without copying
+keymap("n", "<S-D>", '"_dd', opts)
