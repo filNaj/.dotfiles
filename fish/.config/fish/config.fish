@@ -7,6 +7,7 @@ alias e="exit"
 alias l="ls -1"
 alias lf="l -d */"
 alias lsf="ls -d */"
+alias cc="cd ~"
 
 #Folders
 alias coding="cd ~/Personal\ Work/Coding/"
