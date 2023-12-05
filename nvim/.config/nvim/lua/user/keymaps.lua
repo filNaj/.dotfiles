@@ -7,8 +7,8 @@ local opts = { silent = true }
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
---Tab out 
-vim.cmd[[inoremap <expr> <Tab> search('\%#[]()>)}''"`]', 'n') ? '<Right>' : '<Tab>']]
+--Tab out
+vim.cmd [[inoremap <expr> <Tab> search('\%#[]()>)}''"`]', 'n') ? '<Right>' : '<Tab>']]
 
 
 -- Modes
@@ -103,20 +103,20 @@ keymap("n", "<leader>dS", "<cmd>lua require('neotest').summary.toggle()<cr>", op
 -- Prettier
 keymap("n", "<leader>fo", ":Prettier<cr>", opts)
 
--- Save 
+-- Save
 keymap("n", "<leader>w", ":w<cr>", opts)
-keymap("n", "<leader>wq", ":wq<cr>", opts) 
+keymap("n", "<leader>wq", ":wq<cr>", opts)
 
 -- Save all buffers
 keymap("n", "<leader>wa", ":wa<cr>", opts)
 
--- Save in insert_mode 
+-- Save in insert_mode
 keymap("i", "<C-s>", "<Esc>:w<cr>", opts)
 
 -- Exit without saving
 keymap("n", "<leader>q", ":q!<cr>", opts)
 
- -- Select all 
+-- Select all
 keymap("n", "<C-a>", "ggVG", opts)
 
 -- Find and replace
@@ -128,19 +128,28 @@ function replaceWord()
   local newWord = vim.fn.input('Replace ' .. word .. ' with: ')
   vim.cmd(':%s/\\<' .. word .. '\\>/' .. newWord .. '/g')
 end
-vim.api.nvim_set_keymap('n', '<leader>rr', ':lua replaceWord()<CR>', {noremap = true, silent = true})
 
--- Comment out line in insert mode 
+vim.api.nvim_set_keymap('n', '<leader>rr', ':lua replaceWord()<CR>', { noremap = true, silent = true })
+
+-- Comment out line in insert mode
 keymap("i", "<C-/>", "<Esc>:CommentToggle<cr>", opts)
 
--- Paste in insert mode 
+-- Paste in insert mode
 keymap("i", "<C-v>", "<Esc>p", opts)
 
--- Reload vim files 
-keymap("n", "<leader>re",":edit!<cr>", opts)
+-- Reload vim files
+keymap("n", "<leader>re", ":edit!<cr>", opts)
 
 --key binding for lua vim.lsp.buf.formatting_sync()
 keymap("n", "<leader>f", ":lua vim.lsp.buf.format()<cr>", opts)
 
 -- delete without copying
 keymap("n", "<S-D>", '"_dd', opts)
+
+-- undo & redo
+keymap('i', '<C-z>', '<Cmd>undo<CR>', opts)
+keymap('i', '<C-S-Z>', '<Cmd>redo<CR>', opts)
+
+-- tabing
+keymap('n', '<Tab>', '>>', opts)
+keymap('n', '<S-Tab>', '<<', opts)
