@@ -8,7 +8,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
 --Tab out
-vim.cmd [[inoremap <expr> <Tab> search('\%#[]()>)}''"`]', 'n') ? '<Right>' : '<Tab>']]
+-- vim.cmd([[inoremap <expr> <Tab> search('\%#[]()>)}''"`]', 'n') ? '<Right>' : '<Tab>']])
 
 
 -- Modes
@@ -144,7 +144,7 @@ keymap("n", "<leader>re", ":edit!<cr>", opts)
 keymap("n", "<leader>f", ":lua vim.lsp.buf.format()<cr>", opts)
 
 -- delete without copying
-keymap("n", "<S-D>", '"_dd', opts)
+keymap("n", "<S-R>", '"_dd', opts)
 
 -- undo & redo
 keymap('i', '<C-z>', '<Cmd>undo<CR>', opts)
