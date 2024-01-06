@@ -1,5 +1,6 @@
 #run fihs_config to open the config browser 
 
+alias p="pnpm"
 alias lg="ls | grep"
 alias vi="nvim"
 alias o="open ."
@@ -80,3 +81,10 @@ fish_add_path  $ANDROID_HOME/emulator  $ANDROID_HOME/platform-tools
 
 #Starship
 # starship init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/home/filip/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
