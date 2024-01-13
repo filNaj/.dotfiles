@@ -44,9 +44,10 @@ function todos
   tmux new-session -d -s TODOS
   tmux split-window -h -p 66 -t TODOS
   tmux split-window -h -p 50 -t TODOS
-  tmux send-keys -t 0 "nvim Time\ management\ \&\ Books/Todos_List.txt" Enter
-  tmux send-keys -t 1 "nvim Time\ management\ \&\ Books/Weekly_Schedule.txt" Enter
-  tmux send-keys -t 2 "nvim /home/filip/Personal\ Work/Coding/Programming-TODOS.txt" Enter
+  tmux send-keys -t 0 "nvim Time\ management\ \&\ Books/Todos.txt" Enter
+  tmux send-keys -t 1 "nvim Time\ management\ \&\ Books/Today-Todos.txt" Enter
+  tmux send-keys -t 2 "nvim /home/filip/Personal\ Work/Business/Business-Todos.txt" Enter\; \
+  send-keys ":tabedit /home/filip/Personal\ Work/Coding/Programming-TODOS.txt" Enter
   tmux select-layout -t TODOS even-horizontal
   tmux rename-window -t TODOS:0 "fish"
   tmux attach-session -t TODOS
