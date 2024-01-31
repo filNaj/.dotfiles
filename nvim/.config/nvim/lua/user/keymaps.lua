@@ -8,7 +8,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
 --Tab out
--- vim.cmd([[inoremap <expr> <Tab> search('\%#[]()>)}''"`]', 'n') ? '<Right>' : '<Tab>']])
+vim.cmd([[inoremap <expr> <Tab> search('\%#[]()>)}''"`]', 'n') ? '<Right>' : '<Tab>']])
 
 
 -- Modes
