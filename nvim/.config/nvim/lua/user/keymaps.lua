@@ -20,6 +20,9 @@ vim.cmd([[inoremap <expr> <Tab> search('\%#[]()>)}''"`]', 'n') ? '<Right>' : '<T
 --   command_mode = "c",
 
 -- Normal --
+-- Delete buffer 
+keymap('n', '<C-w>', ':bd<CR>', { noremap = true, silent = true })
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -76,6 +79,7 @@ keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap('n', '<leader>wd', ':Gitsigns toggle_word_diff<CR>', { noremap = true, silent = true })
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
