@@ -28,7 +28,6 @@ require "user.noice"
 require "user.neotest"
 require "user.onedark"
 require "user.utilsnips"
-vim.g.UltiSnipsExpandTrigger = "<S-Tab>"
 
 
 vim.cmd[[colorscheme neosolarized]]
