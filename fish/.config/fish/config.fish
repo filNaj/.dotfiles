@@ -47,6 +47,7 @@ function todos
   tmux send-keys -t 0 "nvim /home/filip/Time\ management\ \&\ Books/General-Todos.txt" Enter ":tabedit Time\ management\ \&\ Books/Todos.txt" Enter
   tmux send-keys -t 1 "nvim Time\ management\ \&\ Books/Today-Todos.txt" Enter
   tmux send-keys -t 2 "nvim /home/filip/Personal\ Work/Business/Business-Todos.txt" Enter\; \
+  send-keys ":tabedit /home/filip/Personal\ Work/Finance/Finance-Todos.txt" Enter\; \
   send-keys ":tabedit /home/filip/Personal\ Work/Coding/Programming-TODOS.txt" Enter
   tmux select-layout -t TODOS even-horizontal
   tmux rename-window -t TODOS:0 "fish"
