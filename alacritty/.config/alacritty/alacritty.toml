@@ -35,6 +35,9 @@ lines = 45
 x = 10
 y = 5
 
+[selection]
+save_to_clipboard = true
+
 # [colors.primary]
 # background = "#010C19"
 
@@ -77,10 +80,7 @@ y = 5
 # color = '0xdb4b4b'
 
 #####################
-
 # Tokyonight moon
-
-# TokyoNight Alacritty Colors
 # [colors.primary]
 # background = '0x222436'
 # foreground = '0xc8d3f5'
@@ -119,7 +119,8 @@ y = 5
 
 # Colors (Solarized Dark)
 [colors.primary]
-background = '0x001217'
+background = '#000000' # black
+# background = '0x001217' # default
 # foreground = '0x708183'
 foreground = '0xc8d3f5'
 
